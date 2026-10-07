@@ -1,273 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixed Odds 1x2 - Ronald Almah VVIP</title>
-    <style>
-        /* Main Page Layout */
-        body {
-            background-color: #ffffff;
-            color: #000000;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Decorative Dividers */
-        .divider {
-            margin: 20px auto;
-            max-width: 500px;
-            font-size: 24px;
-            color: #333;
-            letter-spacing: -2px;
-        }
+  <title>Ronald Almah Football</title>
+  <meta name="description" content="Football news, fixtures, results, statistics and league tables.">
 
-        /* Offers Section Title Card */
-        .offers-header {
-            background: linear-gradient(135deg, #4d3d19 0%, #111111 100%);
-            color: #ffcc00;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 4px 0 0 4px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Pricing Table Setup */
-        .pricing-table {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f4f7;
+      color: #222;
+      line-height: 1.5;
+    }
 
-        .pricing-table th {
-            color: #ffffff;
-            padding: 12px 5px;
-            font-size: 15px;
-            font-weight: bold;
-            width: 25%;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .th-week { background-color: #1a237e; }    /* Blue */
-        .th-weeks { background-color: #1b5e20; }   /* Green */
-        .th-month { background-color: #4a148c; }   /* Purple */
+    /* TOP BAR */
+    .topbar {
+      background: #111827;
+      color: white;
+      padding: 8px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
 
-        .pricing-table td {
-            padding: 10px 5px;
-            border: 1px solid #dddddd;
-            background-color: #111111;
-            color: #ffffff;
-        }
+    /* HEADER */
+    header {
+      background: #087f3d;
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .price-tag {
-            font-size: 18px;
-            font-weight: bold;
-            display: block;
-        }
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
 
-        .duration-tag {
-            font-size: 11px;
-            color: #aaa;
-            display: block;
-        }
+    .logo span {
+      color: #ffd400;
+    }
 
-        /* Order Buttons */
-        .buy-btn {
-            background-color: #b71c1c;
-            color: #ffffff;
-            border: none;
-            padding: 6px 12px;
-            font-weight: bold;
-            border-radius: 3px;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-            font-size: 12px;
-        }
+    /* NAVIGATION */
+    nav {
+      background: #05652f;
+      color: white;
+    }
 
-        /* Logo Branding Area */
-        .brand-logo {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 36px;
-            font-weight: bold;
-            margin: 15px 0 5px 0;
-            color: #111111;
-        }
-        
-        .brand-subtext {
-            font-size: 14px;
-            color: #444;
-            margin-bottom: 20px;
-        }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+    }
 
-        .intro-text {
-            font-size: 13px;
-            line-height: 1.6;
-            max-width: 650px;
-            margin: 0 auto 30px auto;
-            color: #222;
-            padding: 0 10px;
-            font-style: italic;
-        }
+    nav a {
+      display: block;
+      padding: 14px 18px;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-        /* Match Archive History Table */
-        .archive-section {
-            max-width: 800px;
-            margin: 0 auto;
-            overflow-x: auto;
-        }
+    nav a:hover,
+    nav a.active {
+      background: #ffd400;
+      color: #111;
+    }
 
-        .history-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 12px;
-            min-width: 500px;
-        }
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-        .history-table th {
-            background-color: #f5f5f5;
-            color: #333333;
-            font-weight: bold;
-            padding: 8px;
-            border: 1px solid #cccccc;
-            text-transform: uppercase;
-        }
+    /* CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
 
-        .history-table td {
-            padding: 7px;
-            border: 1px solid #cccccc;
-            color: #000000;
-            background-color: #ffffff;
-        }
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #087f3d, #043b20);
+      color: white;
+      padding: 35px 25px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
 
-        /* Status Colors */
-        .win-check { color: #2e7d32; font-weight: bold; }
-        .lose-x { color: #c62828; font-weight: bold; }
-    </style>
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #e5e7eb;
+    }
+
+    /* LAYOUT */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 25px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+
+    .section-title {
+      background: #087f3d;
+      color: white;
+      padding: 13px 16px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .section-content {
+      padding: 15px;
+    }
+
+    /* MATCH CARDS */
+    .match-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 12px;
+      background: #fff;
+    }
+
+    .match-league {
+      font-size: 12px;
+      color: #087f3d;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .match-date {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .teams {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .team {
+      width: 40%;
+    }
+
+    .vs {
+      width: 20%;
+      color: #087f3d;
+      font-weight: bold;
+    }
+
+    /* NEWS */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .news-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .news-image {
+      height: 150px;
+      background: linear-gradient(135deg, #087f3d, #111827);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 35px;
+    }
+
+    .news-content {
+      padding: 13px;
+    }
+
+    .news-content h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .news-content p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #087f3d;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      background: #f3f4f6;
+      text-align: left;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+      border-top: 1px solid #eee;
+    }
+
+    tr:hover {
+      background: #f9fafb;
+    }
+
+    /* SIDEBAR */
+    .sidebar-list {
+      list-style: none;
+    }
+
+    .sidebar-list li {
+      border-bottom: 1px solid #eee;
+      padding: 12px 5px;
+      font-size: 14px;
+    }
+
+    .sidebar-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* SEARCH */
+    .search-box {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #087f3d;
+      color: white;
+      border: none;
+      padding: 0 18px;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      background: #087f3d;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #05652f;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: white;
+      margin-top: 40px;
+      padding: 35px 5%;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #ffd400;
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer li {
+      color: #d1d5db;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #374151;
+      margin-top: 25px;
+      padding-top: 20px;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      .topbar {
+        padding: 7px 15px;
+      }
+
+      header {
+        padding: 13px 15px;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-container.show {
+        display: flex;
+      }
+
+      nav a {
+        border-top: 1px solid rgba(255,255,255,.1);
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        margin-top: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Decorative Top Accent -->
-    <div class="divider">❦ ═════════ • ═════════ ❦</div>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>Latest Football Updates</span>
+    <span>Welcome to Ronald Almah Football</span>
+  </div>
 
-    <!-- Offers Pricing Block -->
-    <table class="pricing-table">
-        <thead>
-            <tr>
-                <td class="offers-header">Fixed Odds<br>1x2<br>Offers</td>
-                <th class="th-week">One Week<br><span class="price-tag">50&euro;</span><span class="duration-tag">7 days</span></th>
-                <th class="th-weeks">Two Weeks<br><span class="price-tag">80&euro;</span><span class="duration-tag">15 days</span></th>
-                <th class="th-month">One Month<br><span class="price-tag">120&euro;</span><span class="duration-tag">30 days</span></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="background:#222; font-weight:bold; color:#f0f0f0;">Provided Tips</td>
-                <td>7 matches</td>
-                <td>15 matches</td>
-                <td>30 matches</td>
-            </tr>
-            <tr>
-                <td style="background:#222; font-weight:bold; color:#f0f0f0;">Odds</td>
-                <td>from 2.00 to 7.00</td>
-                <td>from 2.00 to 7.00</td>
-                <td>from 2.00 to 7.00</td>
-            </tr>
-            <tr>
-                <td style="background:#222; font-weight:bold; color:#f0f0f0;">Bonus</td>
-                <td>1 VIP Ticket</td>
-                <td>2 VIP Tickets</td>
-                <td>3 VIP Tickets</td>
-                <td>4 VIP Tickets</td>
-                <td>5 VIP Tickets</td>
-                <td>6 VIP Tickets</td>
-                <td>7 VIP Tickets</td>
-                <td>8 VIP Tickets</td>
-            </tr>
-            <tr>
-                <td style="background:#222; font-weight:bold; color:#f0f0f0;">Fixed and Secure</td>
-                <td style="color:#00ff00;">100%</td>
-                <td style="color:#00ff00;">100%</td>
-                <td style="color:#00ff00;">100%</td>
-            </tr>
-            <tr>
-                <td style="background:#222; font-weight:bold; color:#f0f0f0;">Live Support</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>✔</td>
-            </tr>
-            <tr>
-                <td style="background:#222;"></td>
-                <td><button class="buy-btn">Buy Now !</button></td>
-                <td><button class="buy-btn">Buy Now !</button></td>
-                <td><button class="buy-btn">Buy Now !</button></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="divider">❦ ═════════ • ═════════ ❦</div>
-
-    <!-- Main Branding Header -->
-    <div class="brand-logo">Fixed Odds 1X2</div>
-    <div class="brand-subtext">ronald0119.github.io</div>
-
-    <p class="intro-text">
-        Become our client because profit is guaranteed! We guarantee you and ensure that you will become a successful businessman only by soccer betting! Make your bets every day and collect the money with a smile on your face. Be clever and earn on the easy way. Buy your happiness now!
-    </p>
-
-    <!-- Archive Proof Table -->
-    <div class="archive-section">
-        <table class="history-table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Match</th>
-                    <th>Pick</th>
-                    <th>Odds</th>
-                    <th>Result</th>
-                    <th>Win</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>01.10.2026</td>
-                    <td>KPV Kokkola - SalPa</td>
-                    <td>1</td>
-                    <td>4.30</td>
-                    <td>2:0</td>
-                    <td class="win-check">✔</td>
-                </tr>
-                <tr>
-                    <td>02.10.2026</td>
-                    <td>FK Pardubice - Jablonec</td>
-                    <td>2</td>
-                    <td>3.00</td>
-                    <td>0:2</td>
-                    <td class="win-check">✔</td>
-                </tr>
-                <tr>
-                    <td>03.10.2026</td>
-                    <td>AC Milan - Inter</td>
-                    <td>1</td>
-                    <td>2.90</td>
-                    <td>1:1</td>
-                    <td class="lose-x">✘</td>
-                </tr>
-                <tr>
-                    <td>04.10.2026</td>
-                    <td>Colo colo - lens</td>
-                    <td>X</td>
-                    <td>2.90</td>
-                    <td>1:1</td>
-                    <td class="win-check">✔</td>
-                </tr>
-                <!-- More layout rows can be inserted here -->
-            </tbody>
-        </table>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      RONALD ALMAH <span>FOOTBALL</span>
     </div>
 
-</body>
-</html>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container" id="navMenu">
+      <a href="#" class="active">HOME</a>
+      <a href="#matches">MATCHES</a>
+      <a href="#results">RESULTS</a>
+      <a href="#news">NEWS</a>
+      <a href="#leagues">LEAGUES</a>
+      <a href="#statistics">STATISTICS</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Welcome to Ronald Almah Football</h1>
+      <p>
+        Your football destination for the latest news, fixtures,
+        results, league tables and football statistics.
+      </p>
+
+      <a href="#matches" class="btn">View Matches</a>
+    </section>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search football news, teams or leagues..."
+        onkeyup="searchContent()"
+      >
+      <button>Search</button>
+    </div>
+
+    <div class="main-layout">
+
+      <!-- MAIN CONTENT -->
+      <div>
+
+        <!-- MATCHES -->
+        <section class="section" id="matches">
+          <div class="section-title">
+            ⚽ Today's Matches
+          </div>
+
+          <div class="section-content">
+
+            <div class="match-card">
+              <div class="match-league">ENGLISH PREMIER LEAGUE</div>
+              <div class="match-date">Today • 18:00</div>
+
+              <div class="teams">
+                <div class="team">Manchester United</div>
+                <div class="vs">VS</div>
+                <div class="team">Chelsea</div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-league">LA LIGA</div>
+              <div class="match-date">Today • 20:30</div>
+
+              <div class="teams">
+                <div class="team">Barcelona</div>
+                <div class="vs">VS</div>
+                <div class="team">Real Madrid</div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-league">SERIE A</div>
+              <div class="match-date">Today • 21:00</div>
+
+              <div class="teams">
+                <div class="team">Inter Milan</div>
+                <div class="vs">VS</div>
+                <div class="team">AC Milan</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- NEWS -->
+        <section class="section" id="news">
+          <div class="section-title">
+            📰 Latest Football News
+          </div>
+
+          <div class="section-content">
+
+            <div class="news-grid">
+
+              <article class="news-card">
+                <div class="news-image">⚽</div>
+
+                <div class="news-content">
+                  <h3>Latest Football Transfer News</h3>
+                  <p>
+                    Follow the latest transfer developments,
+                    club announcements and football stories.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-image">🏆</div>
+
+                <div class="news-content">
+                  <h3>League Competition Update</h3>
+                  <p>
+                    Get the latest information from major
+                    football competitions around the world.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-image">🌍</div>
+
+                <div class="news-content">
+                  <h3>African Football News</h3>
+                  <p>
+                    Latest football developments from Kenya,
+                    Tanzania and across Africa.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-image">📣</div>
+
+                <div class="news-content">
+                  <h3>Football Around the World</h3>
+                  <p>
+                    Discover important stories from international
+                    football.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section class="section" id="results">
+          <div class="section-title">
+            ✅ Latest Results
+          </div>
+
+          <div class="section-content">
+
+            <div class="match-card">
+              <div class="match-league">PREMIER LEAGUE</div>
+
+              <div class="teams">
+                <div class="team">Arsenal</div>
+                <div class="vs">2 - 1</div>
+                <div class="team">Liverpool</div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-league">LA LIGA</div>
+
+              <div class="teams">
+                <div class="team">Real Madrid</div>
+                <div class="vs">3 - 0</div>
+                <div class="team">Valencia</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- LEAGUE TABLE -->
+        <section class="section" id="leagues">
+          <div class="section-title">
+            🏆 League Table
+          </div>
+
+          <div class="section-content">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th>P</th>
+                  <th>GD</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Team A</td>
+                  <td>10</td>
+                  <td>+15</td>
+                  <td>25</td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Team B</td>
+                  <td>10</td>
+                  <td>+
