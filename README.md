@@ -1,1 +1,637 @@
-# Ronald-Almah-VVIP-Fixed-Matches
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ronald Almah Football</title>
+  <meta name="description" content="Football news, fixtures, results, statistics and league tables.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f4f7;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #111827;
+      color: white;
+      padding: 8px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* HEADER */
+    header {
+      background: #087f3d;
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #ffd400;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #05652f;
+      color: white;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      display: block;
+      padding: 14px 18px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #ffd400;
+      color: #111;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #087f3d, #043b20);
+      color: white;
+      padding: 35px 25px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #e5e7eb;
+    }
+
+    /* LAYOUT */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 25px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+
+    .section-title {
+      background: #087f3d;
+      color: white;
+      padding: 13px 16px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .section-content {
+      padding: 15px;
+    }
+
+    /* MATCH CARDS */
+    .match-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 12px;
+      background: #fff;
+    }
+
+    .match-league {
+      font-size: 12px;
+      color: #087f3d;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .match-date {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .teams {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .team {
+      width: 40%;
+    }
+
+    .vs {
+      width: 20%;
+      color: #087f3d;
+      font-weight: bold;
+    }
+
+    /* NEWS */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .news-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .news-image {
+      height: 150px;
+      background: linear-gradient(135deg, #087f3d, #111827);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 35px;
+    }
+
+    .news-content {
+      padding: 13px;
+    }
+
+    .news-content h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .news-content p {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #087f3d;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      background: #f3f4f6;
+      text-align: left;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+      border-top: 1px solid #eee;
+    }
+
+    tr:hover {
+      background: #f9fafb;
+    }
+
+    /* SIDEBAR */
+    .sidebar-list {
+      list-style: none;
+    }
+
+    .sidebar-list li {
+      border-bottom: 1px solid #eee;
+      padding: 12px 5px;
+      font-size: 14px;
+    }
+
+    .sidebar-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* SEARCH */
+    .search-box {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .search-box button {
+      background: #087f3d;
+      color: white;
+      border: none;
+      padding: 0 18px;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      background: #087f3d;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #05652f;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: white;
+      margin-top: 40px;
+      padding: 35px 5%;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #ffd400;
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer li {
+      color: #d1d5db;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #374151;
+      margin-top: 25px;
+      padding-top: 20px;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      .topbar {
+        padding: 7px 15px;
+      }
+
+      header {
+        padding: 13px 15px;
+      }
+
+      .logo {
+        font-size: 21px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-container.show {
+        display: flex;
+      }
+
+      nav a {
+        border-top: 1px solid rgba(255,255,255,.1);
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>Latest Football Updates</span>
+    <span>Welcome to Ronald Almah Football</span>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      RONALD ALMAH <span>FOOTBALL</span>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container" id="navMenu">
+      <a href="#" class="active">HOME</a>
+      <a href="#matches">MATCHES</a>
+      <a href="#results">RESULTS</a>
+      <a href="#news">NEWS</a>
+      <a href="#leagues">LEAGUES</a>
+      <a href="#statistics">STATISTICS</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Welcome to Ronald Almah Football</h1>
+      <p>
+        Your football destination for the latest news, fixtures,
+        results, league tables and football statistics.
+      </p>
+
+      <a href="#matches" class="btn">View Matches</a>
+    </section>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search football news, teams or leagues..."
+        onkeyup="searchContent()"
+      >
+      <button>Search</button>
+    </div>
+
+    <div class="main-layout">
+
+      <!-- MAIN CONTENT -->
+      <div>
+
+        <!-- MATCHES -->
+        <section class="section" id="matches">
+          <div class="section-title">
+            ⚽ Today's Matches
+          </div>
+
+          <div class="section-content">
+
+            <div class="match-card">
+              <div class="match-league">ENGLISH PREMIER LEAGUE</div>
+              <div class="match-date">Today • 18:00</div>
+
+              <div class="teams">
+                <div class="team">Manchester United</div>
+                <div class="vs">VS</div>
+                <div class="team">Chelsea</div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-league">LA LIGA</div>
+              <div class="match-date">Today • 20:30</div>
+
+              <div class="teams">
+                <div class="team">Barcelona</div>
+                <div class="vs">VS</div>
+                <div class="team">Real Madrid</div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-league">SERIE A</div>
+              <div class="match-date">Today • 21:00</div>
+
+              <div class="teams">
+                <div class="team">Inter Milan</div>
+                <div class="vs">VS</div>
+                <div class="team">AC Milan</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- NEWS -->
+        <section class="section" id="news">
+          <div class="section-title">
+            📰 Latest Football News
+          </div>
+
+          <div class="section-content">
+
+            <div class="news-grid">
+
+              <article class="news-card">
+                <div class="news-image">⚽</div>
+
+                <div class="news-content">
+                  <h3>Latest Football Transfer News</h3>
+                  <p>
+                    Follow the latest transfer developments,
+                    club announcements and football stories.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-image">🏆</div>
+
+                <div class="news-content">
+                  <h3>League Competition Update</h3>
+                  <p>
+                    Get the latest information from major
+                    football competitions around the world.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-image">🌍</div>
+
+                <div class="news-content">
+                  <h3>African Football News</h3>
+                  <p>
+                    Latest football developments from Kenya,
+                    Tanzania and across Africa.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+              <article class="news-card">
+                <div class="news-image">📣</div>
+
+                <div class="news-content">
+                  <h3>Football Around the World</h3>
+                  <p>
+                    Discover important stories from international
+                    football.
+                  </p>
+                  <a href="#" class="read-more">Read More →</a>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RESULTS -->
+        <section class="section" id="results">
+          <div class="section-title">
+            ✅ Latest Results
+          </div>
+
+          <div class="section-content">
+
+            <div class="match-card">
+              <div class="match-league">PREMIER LEAGUE</div>
+
+              <div class="teams">
+                <div class="team">Arsenal</div>
+                <div class="vs">2 - 1</div>
+                <div class="team">Liverpool</div>
+              </div>
+            </div>
+
+            <div class="match-card">
+              <div class="match-league">LA LIGA</div>
+
+              <div class="teams">
+                <div class="team">Real Madrid</div>
+                <div class="vs">3 - 0</div>
+                <div class="team">Valencia</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- LEAGUE TABLE -->
+        <section class="section" id="leagues">
+          <div class="section-title">
+            🏆 League Table
+          </div>
+
+          <div class="section-content">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th>P</th>
+                  <th>GD</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Team A</td>
+                  <td>10</td>
+                  <td>+15</td>
+                  <td>25</td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td>Team B</td>
+                  <td>10</td>
+                  <td>+
