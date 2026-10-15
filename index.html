@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betting King | Premium Fixed Matches & VVIP Sports Tips</title>
+    <title>RONALD ALMAH | Premium VVIP Sports Tips & Predictions</title>
     <style>
-        /* --- GLOBAL STYLE INITIALIZATION --- */
+        /* --- CORE CONFIGURATION & STYLES --- */
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #0d0d0d;
+            background-color: #0b0f19;
             color: #ffffff;
             line-height: 1.6;
         }
@@ -26,10 +26,10 @@
             padding: 20px 0;
         }
 
-        /* --- STICKY NAVIGATION BAR --- */
+        /* --- HEADER NAVIGATION --- */
         header {
-            background-color: #141414;
-            border-bottom: 3px solid #ffbc00;
+            background-color: #121826;
+            border-bottom: 2px solid #ffcc00;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -44,8 +44,8 @@
 
         .logo {
             font-size: 26px;
-            font-weight: 900;
-            color: #ffbc00;
+            font-weight: 800;
+            color: #ffcc00;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
@@ -66,92 +66,78 @@
         .nav-links a {
             color: #ffffff;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
+            font-weight: 600;
+            font-size: 15px;
             text-transform: uppercase;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #ffbc00;
+            color: #ffcc00;
         }
 
-        /* --- HERO INTRO BANNER --- */
+        /* --- HERO BANNER SECTION --- */
         .hero {
             text-align: center;
-            padding: 120px 20px;
-            background: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.98)), url('https://unsplash.com') no-repeat center center/cover;
-            border-bottom: 1px solid #262626;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.98)), url('https://unsplash.com') no-repeat center center/cover;
+            border-bottom: 1px solid #1f293d;
         }
 
         .hero h1 {
-            font-size: 46px;
+            font-size: 48px;
             color: #ffffff;
             margin-bottom: 20px;
             text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 1px;
+            font-weight: 800;
         }
 
         .hero h1 span {
-            color: #ffbc00;
+            color: #ffcc00;
         }
 
         .hero p {
-            font-size: 20px;
-            color: #cccccc;
-            max-width: 750px;
+            font-size: 19px;
+            color: #a0aec0;
+            max-width: 700px;
             margin: 0 auto 35px auto;
-            font-weight: 400;
         }
 
         .btn {
-            background-color: #ffbc00;
-            color: #0d0d0d;
-            padding: 15px 40px;
+            background-color: #ffcc00;
+            color: #0b0f19;
+            padding: 14px 35px;
             text-decoration: none;
-            font-weight: 800;
-            border-radius: 4px;
+            font-weight: bold;
+            border-radius: 5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, transform 0.2s;
             display: inline-block;
-            border: 2px solid #ffbc00;
         }
 
         .btn:hover {
-            background-color: transparent;
-            color: #ffbc00;
-            transform: translateY(-3px);
+            background-color: #e6b800;
+            transform: translateY(-2px);
         }
 
-        /* --- VERIFIED ARCHIVE SECTION --- */
+        /* --- RECENT WINNING ARCHIVE TABLE --- */
         .section-title {
             text-align: center;
             font-size: 32px;
-            margin: 60px 0 30px 0;
+            margin: 50px 0 25px 0;
             text-transform: uppercase;
-            color: #ffbc00;
-            letter-spacing: 1.5px;
-            font-weight: 800;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: #ffbc00;
-            margin: 10px auto 0 auto;
+            color: #ffcc00;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
 
         .table-container {
             overflow-x: auto;
-            background-color: #141414;
-            border-radius: 6px;
-            border: 1px solid #262626;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background-color: #121826;
+            border-radius: 8px;
+            border: 1px solid #1f293d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         table {
@@ -161,66 +147,62 @@
         }
 
         th, td {
-            padding: 20px;
-            border-bottom: 1px solid #262626;
+            padding: 18px;
+            border-bottom: 1px solid #1f293d;
         }
 
         th {
-            background-color: #1f1f1f;
-            color: #ffbc00;
-            font-weight: 800;
+            background-color: #1a2333;
+            color: #ffcc00;
+            font-weight: 700;
             text-transform: uppercase;
             font-size: 14px;
-            letter-spacing: 0.5px;
         }
 
         td {
             font-size: 15px;
-            font-weight: 600;
         }
 
         tr:hover {
-            background-color: #1a1a1a;
+            background-color: #161f30;
         }
 
-        .badge-won {
-            background-color: #1b4332;
-            color: #75dc84;
-            padding: 6px 14px;
+        .badge {
+            background-color: #276749;
+            color: #c6f6d5;
+            padding: 5px 12px;
             border-radius: 4px;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            border: 1px solid #2d6a4f;
-            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
-        /* --- VVIP PRICING CARD SYSTEM --- */
+        /* --- VVIP PRICING CARD LAYOUT --- */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         .price-card {
-            background-color: #141414;
-            border: 1px solid #262626;
-            border-radius: 6px;
-            padding: 45px 30px;
+            background-color: #121826;
+            border: 1px solid #1f293d;
+            border-radius: 8px;
+            padding: 40px 30px;
             text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, border-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .price-card:hover {
-            transform: translateY(-10px);
-            border-color: #ffbc00;
-            box-shadow: 0 15px 35px rgba(255, 188, 0, 0.1);
+            transform: translateY(-8px);
+            border-color: #ffcc00;
         }
 
         .price-card.featured {
-            border: 2px solid #ffbc00;
+            border: 2px solid #ffcc00;
             position: relative;
         }
 
@@ -229,11 +211,11 @@
             top: -14px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #ffbc00;
-            color: #0d0d0d;
-            padding: 4px 22px;
+            background-color: #ffcc00;
+            color: #0b0f19;
+            padding: 4px 20px;
             font-size: 11px;
-            font-weight: 900;
+            font-weight: 800;
             border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -244,143 +226,154 @@
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            color: #ffffff;
         }
 
         .price-card .price {
-            font-size: 46px;
-            color: #ffbc00;
-            font-weight: 900;
+            font-size: 42px;
+            color: #ffcc00;
+            font-weight: 800;
             margin-bottom: 25px;
         }
 
         .price-card ul {
             list-style: none;
-            margin-bottom: 40px;
-            color: #aaaaaa;
+            margin-bottom: 35px;
+            color: #a0aec0;
             text-align: left;
             display: inline-block;
-            width: 100%;
         }
 
         .price-card ul li {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-size: 15px;
             position: relative;
-            padding-left: 25px;
-            font-weight: 500;
+            padding-left: 20px;
         }
 
         .price-card ul li::before {
-            content: "✔";
+            content: "✓";
             position: absolute;
             left: 0;
-            color: #ffbc00;
-            font-weight: 900;
+            color: #ffcc00;
+            font-weight: bold;
         }
 
         .price-card .btn {
             width: 100%;
         }
 
-        /* --- CHANNELS & SUPPORT CENTER --- */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 50px 0;
-        }
-
-        .contact-box {
-            background-color: #141414;
-            border-radius: 6px;
-            border: 1px solid #262626;
-            padding: 45px 35px;
+        /* --- TELEGRAM CONTACT SECTION --- */
+        .contact-section {
+            background-color: #121826;
+            border-radius: 8px;
+            border: 1px solid #1f293d;
+            padding: 50px 30px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            margin: 50px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
-        .contact-box h3 {
-            font-size: 24px;
-            color: #ffbc00;
-            text-transform: uppercase;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .contact-box p {
-            color: #aaaaaa;
-            font-size: 16px;
-            max-width: 450px;
-            margin-bottom: 30px;
-            font-weight: 500;
+        .contact-section p {
+            color: #a0aec0;
+            font-size: 17px;
+            max-width: 650px;
+            margin: 0 auto 25px auto;
         }
 
         .telegram-btn {
             background-color: #0088cc;
             color: #ffffff;
-            border: 2px solid #0088cc;
-            padding: 15px 35px;
+            padding: 15px 40px;
             text-decoration: none;
-            font-weight: 800;
-            border-radius: 4px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            width: 100%;
-            max-width: 280px;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .telegram-btn:hover {
-            background-color: transparent;
-            color: #0088cc;
+            background-color: #0077b3;
             transform: translateY(-2px);
         }
 
-        .whatsapp-btn {
-            background-color: #25d366;
-            color: #ffffff;
-            border: 2px solid #25d366;
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: 800;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            width: 100%;
-            max-width: 280px;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: transparent;
-            color: #25d366;
-            transform: translateY(-2px);
-        }
-
-        /* --- FOOTER REGULATION DISCLAIMER --- */
+        /* --- FOOTER & DISCLAIMER --- */
         footer {
-            background-color: #080808;
+            background-color: #080c14;
             text-align: center;
-            padding: 50px 20px;
-            color: #555555;
+            padding: 40px 20px;
+            color: #4a5568;
             font-size: 14px;
-            border-top: 1px solid #262626;
+            border-top: 1px solid #1f293d;
         }
 
         footer p {
-            margin-bottom: 20px;
-            font-weight: 600;
+            margin-bottom: 15px;
         }
 
         .disclaimer {
             font-size: 12px;
-            color: #666666;
-            max-width: 950px;
+            color: #718096;
+            max-width: 900px;
             margin: 0 auto;
             line-height: 1.8;
-            font-weight: 500;
+        }
+
+        /* --- MOBILE SCREEN ADAPTATIONS --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Keeps view clean on phone browsers */
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 26px;
+            }
+            th, td {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Betting<span>King</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#archive">Archive</a></li>
+                    <li><a href="#vvip">VVIP Plans</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO HEADER -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to <span>Betting-King.org</span></h1>
+            <p>Your ultimate portal for elite football tips, verified daily predictions, and premium insider combinations.</p>
+            <a href="#vvip" class="btn">View Premium VIP Packages</a>
+        </div>
+    </section>
+
+    <!-- ARCHIVE WINNING TABLE -->
+    <section id="archive" class="container">
+        <h2 class="section-title">Recent Winning Archive</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Match / League Details</th>
+                        <th>Tip Selection</th>
